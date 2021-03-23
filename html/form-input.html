@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+</style>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar sidebar-dark sidebar-fixed sidebar-self-hiding-md" id="sidebar">
+      <div class="sidebar-brand d-lg-down-none">
+        SIORI
+        </div>
+      <ul class="sidebar-nav flex-column " data-coreui="navigation">
+          <li class="nav-item"><a href="#" class="nav-link ">Dashboard</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Inaktif</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+        <header class="header header-sticky mb-4">
+        <div class="container-fluid"><a class="header-brand d-lg-none" href="#">
+            <svg width="118" height="46" alt="CoreUI Logo">
+              <use xlink:href="assets/brand/coreui.svg#full"></use>
+            </svg></a>
+          <button class="header-toggler order-sm-first px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+            <svg class="icon icon-lg">
+              <use xlink:href="../node_modules/@coreui/icons/sprites/free.svg#cil-menu"></use>
+            </svg>
+          </button>
+          <p class="h3">Inaktif</p>
+
+          <!-- Profile Area -->
+          <ul class="header-nav ms-auto">
+            <li class="nav-item dropdown d-flex align-items-center"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <div class="">
+                    <!-- <img class="avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"> -->
+                    Profile Name
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end pt-0">
+                  <svg class="icon me-2">
+                    <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-account-logout"></use>
+                  </svg> Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="header-divider"></div>
+      </header>
+ <!-- !Body -->
+ <div class="p-4 pt-2">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card mb-4 shadow-lg">
+                <div class="card-header">Data Inaktif</div>
+                <div class="card-body">
+                    <form action="" class="p-4" >
+                        <div class="row gx-5 gy-3 p-1 py-3 rounded border" style="background:rgba(5, 5, 5, .05)">
+                            <div class=" col-md-6">
+                                <label for="NoArsip" class="form-label">No Arsip</label>
+                                <input type="number" class="form-control" id="NoArsip" name="NoArsip" placeholder="Nomor Arsip">
+                            </div>
+                            <div class=" col-md-6">
+                                <label for="TanggalInput" class="form-label">Tanggal Input</label>
+                                <input type="date" class="form-control" id="TanggalInput" name="TanggalInput">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="PenciptaArsip" class="form-label">Pencipta Arsip</label>
+                                <input type="text" class="form-control" id="PenciptaArsip" name="PenciptaArsip"  placeholder="Pencipta Arsip">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="UnitPengelolah" class="form-label">Unit Pengelolah</label>
+                                <input type="text" class="form-control" id="UnitPengelolah" name="UnitPengelolah" placeholder="Unit Pengelolah">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Indeks" class="form-label">Indeks</label>
+                                <input type="number" class="form-control" id="Indeks" name="Indeks"  placeholder="Indeks">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="NoItemArsip" class="form-label">No Item Arsip</label>
+                                <input type="number" class="form-control" id="NoItemArsip" name="NoItemArsip" placeholder="Nomor Item Arsip">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="KodeKlasifikasi" class="form-label">Kode Klasifikasi</label>
+                                <input type="text" class="form-control" id="KodeKlasifikasi" name="KodeKlasifikasi"  placeholder="Kode Klasifikasi">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TanggalSurat" class="form-label">Tanggal Surat</label>
+                                <input type="text" class="form-control" id="TanggalSurat" name="TanggalSurat">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Uraian" class="form-label">Uraian</label>
+                                <textarea name="Uraian" id="Uraian" class="form-control" style="min-height: 20vh;" placeholder="Uraian"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="RetensiAktif" class="form-label">Retensi Aktif</label>
+                                <input type="text" class="form-control" id="RetensiAktif" name="RetensiAktif"  placeholder="Retensi Aktif">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="RetensiInaktif" class="form-label">Retensi Inaktif</label>
+                                <input type="text" class="form-control" id="RetensiInaktif" name="RetensiInaktif"  placeholder="Retensi Inaktif">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="BokArsip" class="form-label">Bok Arsip</label>
+                                <input type="text" class="form-control" id="BokArsip" name="BokArsip"  placeholder="Bok Arsip">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="BokArsip" class="form-label">Keterangan</label>
+                                <select class="form-select" aria-label="" required>
+                                    <option selected disabled>Open this select menu</option>
+                                    <option value="1">Berkas</option>
+                                    <option value="2">Lembar</option>
+                                    <option value="3">Ekspi</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="KodeKlasifikasi" class="form-label">Tingkat Perkembangan</label>
+                                <div class="row g-3 col-md-12">
+                                    <div class="col-md-5">
+                                        <select class="form-select" aria-label="" required>
+                                            <option selected disabled>Open this select menu</option>
+                                            <option value="1">Asli</option>
+                                            <option value="2">Lemburan</option>
+                                            <option value="3">Salinan</option>
+                                            <option value="4">Fotocopy</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select class="form-select" aria-label="" required>
+                                            <option selected disabled>Open this select menu</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5 mb-2">
+                                        <select class="form-select" aria-label="" required>
+                                            <option selected disabled>Open this select menu</option>
+                                            <option value="1">Berkas</option>
+                                            <option value="2">Lembar</option>
+                                            <option value="3">Ekspi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex" style="justify-content: center;">
+                            <input type="submit" value="Submit" class="mt-4 btn btn-primary col-2" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+
+      <!-- Footer -->
+    </div>
+    <script src="../public/js/bootstrap.js"></script>
+    <script src="../public/js/coreui.bundle.min.js"></script>
+    <script src="../public/js/main.js"></script>
+  </body>
+  </html>

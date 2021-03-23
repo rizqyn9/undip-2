@@ -1,0 +1,108 @@
+<%- include('./components/_header.ejs') %>  
+<%- include('./components/_aside.ejs') %>  
+<%- include('./components/_nav.ejs') %> 
+
+<div class="p-4 pt-2">
+
+    <!-- ! Table -->
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="card mb-4 shadow-lg">
+            <div class="card-header">Data Inaktif</div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between mb-3">
+                    <a href="/data/baru" class="btn btn-dark text-light">Tambah Data</a>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                      </form>
+                </div>
+              <table class="table table-responsive-sm table-bordered table-striped table-sm" id="table-data">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Action</th>
+                    <th>Nomor Arsip</th>
+                    <th>Kode Klasifikasi</th>
+                    <th>Uraian</th>
+                    <th>Tanggal</th>
+                  </tr>
+                </thead>
+                <tbody id="data-render">
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-between">
+                  <div class="d-flex" style="display: flex;">
+                      <select name="" id="views-data" class="form-select form-sm" style="height: max-content; width: 6rem; padding: .4rem .8rem;">
+                          <option value="1">1</option>
+                          <option value="2">10</option>
+                          <option value="3">100</option>
+                          <option value="4">1000</option>
+                      </select>
+                      <p style="height: max-content; align-self: center; padding: 0 1rem;">Show data tables</p>
+                  </div>
+                  <nav class="">
+                    <ul class="pagination">
+                      <li class="page-item accent-dark"><a class="page-link" href="#">Prev</a></li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-->
+      </div>
+  </div>
+
+  <script>
+      //   Views query
+      //   Page query
+      //   Search query
+      let tbody = document.querySelector('#data-render')
+      let PaginationContainer = document.querySelector('.pagination')
+
+
+
+      search(30,1,"adadasd")
+
+      function search (_views, _pages, _search) {
+        fetch(`/data/${_views}/${_pages}/${_search}`).then(res => {
+            return res.json()
+        }).then(res => {
+            console.log(res.length);
+            renderPagination(res.length, _views)
+            render(res, _views, _pages)
+        })
+      }
+
+    function createNode(element) {
+        return document.createElement(element);
+    }
+
+    function append(parent, el) {
+    return parent.appendChild(el);
+    }
+
+    function render (_data, _views, _pages) {
+        _data.map((el,i) => {
+            let tr = createNode("TR")
+            tr.innerHTML = 
+            `
+            <td>${(_views * _pages) -  _views + i + 1}</td>
+            <td><a href="/ubah/${el._id}">Edit</a></td>
+            <td>${el.TanggalInput}</td>
+            <td>${el.Indeks}</td>
+            <td>${el.KodeKlasifikasi}</td>
+            <td>${el.Uraian}</td>
+            `
+            append(tbody, tr)
+        })
+    }
+
+  </script>
+<%- include('./components/_footer.ejs') %>  

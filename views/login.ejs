@@ -1,0 +1,75 @@
+<%- include('./components/_header.ejs') %>  
+
+
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <img src="/img/cover.jpg" class="img-fluid position-absolute" alt="..." style="background-size: cover; height: 100vh; width: 100vw;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-5 shadow-lg border rounded card">
+          <div class="card-group d-block d-md-flex row">
+            <div class="card col-3 p-4 mb-0">
+              <div class="card-body">
+                <div class="" id="login">
+                  <h1 class=" mb-4">Masuk</h1>
+                  <form action="" method="POST">
+                    <div class="mb-3">
+                      <label for="Username" class="form-label ">Username</label>
+                      <input class="form-control rounded" id="Username" type="text" placeholder="Username" name="Username" required>
+                    </div>
+                    <div class="mb-5">
+                      <label for="" class="form-label ">Password</label>
+                      <input class="form-control" type="password" placeholder="Password" name="Password" required>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <a onclick="signupClick()" class="link-dark" style="cursor: pointer;">Belum punya akun? Daftar</a>
+                      <input class="btn btn-primary px-5" type="submit" value="Masuk">
+                    </div>
+                  </form>
+                </div>
+                <div class="visually-hidden" id="signup">
+                  <h1 class=" mb-4">Daftar</h1>
+                  <form action="/authentication/signup" method="POST">
+                    <div class="mb-3">
+                      <label for="Name" class="form-label ">Nama</label>
+                      <input class="form-control rounded" id="Name" type="text" placeholder="Nama Lengkap" name="Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Username" class="form-label ">Username</label>
+                      <input class="form-control rounded" id="Username" type="text" placeholder="Username" name="Username" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Email" class="form-label ">Email</label>
+                      <input class="form-control rounded" id="Email" type="email" placeholder="Username" name="Email" required>
+                    </div>
+                    <div class="mb-5">
+                      <label for="Password" class="form-label ">Password</label>
+                      <input class="form-control" id="Password" type="password" placeholder="Password" name="Password" required>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <a onclick="loginClick()" class="link-dark" style="cursor: pointer;">Sudah punya akun? Masuk</a>
+                      <input class="btn btn-primary px-5" type="submit" value="Masuk">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let login = document.getElementById('login')
+    let signup = document.getElementById('signup')
+
+    function loginClick () {
+      login.classList.remove('visually-hidden')
+      signup.classList.add('visually-hidden')
+    }
+    function signupClick () {
+      signup.classList.remove('visually-hidden')
+      login.classList.add('visually-hidden')
+    }
+  </script>
+<%- include('./components/_footer.ejs') %> 
