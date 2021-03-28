@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/generated.css">
+
+    <style>
+        .hideSideBar{
+            width: 0 !important;
+            border: none;
+            overflow: hidden;
+            transition: all .5s ease;
+        }
+    </style>
+</head>
+<body class="flex text-white h-max">
+    <aside class=" flex-shrink-0 bg-green1 flex flex-col transition-all relative bg-green4 bg-opacity-90" id="aside" style="width: 18rem; height: inherit;">
+        <div class=" fixed" style="width: inherit;">
+            <div class="h-16 flex items-center justify-center text-lg font-extrabold text-center text-white bg-green4">SIORI</div>
+            <div class="w-full flex flex-grow flex-col p-2 justify-center text-white gap-1">
+                <a href="" class="w-full px-5 py-4 rounded-lg bg-green3 hover:text-green1" ><span class="text-lg font-medium">Dashboard</span></a>
+                <a href="" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Arsip Inaktif</span></a>
+                <a href="" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Permanen</span></a>
+                <a href="" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Musnah</span></a>
+                <a href="" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Ditinjau Kembali</span></a>
+                <a href="" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Pinjam</span></a>
+            </div>
+        </div>
+    </aside>
+    <div class="flex-grow ">
+        <nav class=" h-10 bg-green1 border-b-2 h-16">
+            <button onclick="hideShow()">Hide/Show</button>
+        </nav>
+        <main class="min-h-screen bg-green1 p-7 text-green5" >
+        <div class=" w-80 h-36 border-l-4 border-green5 rounded-sm bg-green2 flex flex-col p-7 tracking-wider  justify-center gap-1">
+                <p class="text-4xl font-extrabold">213</p>
+                <h1 class="text-xl font-bold">Total Arsip</h1>
+                <a href="" class="text-md hover:underline">Lihat detail</a>
+                
+            </div>
+        </main>
+    </div>
+
+
+    <script>
+        function hideShow () {
+            let aside = document.querySelector('#aside')
+            // console.log(aside.classList.contains('hideS'))
+            if(aside.classList.contains('hideSideBar')){
+                console.log(true);
+                aside.classList.remove('hideSideBar')
+            } else {
+                console.log(false);
+                aside.classList.add('hideSideBar')
+            }
+        }
+    </script>
+</body>
+</html>

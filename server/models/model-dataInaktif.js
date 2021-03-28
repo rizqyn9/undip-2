@@ -54,6 +54,10 @@ const Inaktif = new mongoose.Schema({
     Created_At : {
         type: Date,
         default : Date.now
+    },
+    Pinjam : {
+        type: Boolean,
+        default : false
     }
 })
 

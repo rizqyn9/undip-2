@@ -21,13 +21,13 @@
   --cui-gray: #8a93a2;
   --cui-gray-dark: #636f83;
   --cui-primary: #321fdb;
-  --cui-secondary: #9da5b1;
+  --cui-secondary: #167D7f;
   --cui-success: #2eb85c;
   --cui-info: #39f;
   --cui-warning: #f9b115;
   --cui-danger: #e55353;
   --cui-light: #ebedef;
-  --cui-dark: #4f5d73;
+  --cui-dark: #167D7f;
   --cui-breakpoint-xs: 0;
   --cui-breakpoint-sm: 576px;
   --cui-breakpoint-md: 768px;
@@ -40,6 +40,7 @@
   --cui-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --cui-body-color: rgba(44, 56, 74, 0.95);
 }
+
 
 *,
 *::before,

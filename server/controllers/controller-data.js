@@ -78,6 +78,60 @@ router.get('/:views/:pages/:search', async (req,res,next) => {
     }
 })
 
+router.get('/permanen', async(req,res,next) => {
+    try {
+        const dataPermanen = await Inaktif.find({Keterangan : "Permanen"})
+        res.render('data', {
+            user : req.session.user.dataPengguna,
+            title : "Data Permanen",
+            data : dataPermanen
+        })
+    } catch (error) {
+        console.log(error);
+    }
+})
 
+router.get('/musnah', async(req,res,next) => {
+    try {
+        const dataMusnah = await Inaktif.find({Keterangan: "Musnah"})
+        res.render('data', {
+            user : req.session.user.dataPengguna,
+            title : "Data Musnah",
+            data : dataMusnah
+        })
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+router.get('/ditinjau', async(req,res,next) => {
+    try {
+        const dataDitinjau = await Inaktif.find({Keterangan : "Ditinjau Kembali"})
+        res.render('data', {
+            user : req.session.user.dataPengguna,
+            title : "Data Ditinjau",
+            data : dataDitinjau
+        })
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+router.get("/hapus/:id", async (req,res,next) => {
+    try {
+        await Inaktif.findByIdAndDelete(req.params.id)
+                    .then(data => {
+                        if (!data){
+                            res.status(401).redirect('/data')
+                        } else {
+                            console.log("Deleted data");
+                            res.status(201).redirect('/data')
+                        }
+                    })
+        } catch (error) {
+            console.log(error);
+            res.status(401).redirect('/data')
+    }
+})
 
 module.exports = router

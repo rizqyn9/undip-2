@@ -1,0 +1,27 @@
+.modal-hidden{
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: all 4s ease;
+}
+
+.modal-custom {
+    width: max-content;
+    height: max-content;
+    transition: all 4s ease;
+    position: absolute;
+}
+
+.base-green-1{
+    background-color: #3D5B59 !important;
+  }
+  .base-green-2{
+    background-color: #B68D40 !important;
+  }
+  .base-green-3{
+    background-color: #167D7f !important;
+  }
+  .base-green-4{
+    background-color: #B68D40 !important;
+  }
+  

@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card mb-4 shadow-lg">
-                <div class="card-header">Edit Inaktif</div>
+                <div class="card-header fs-4">Edit Inaktif  <span class="fs-6">( <%= data.NoArsip %> )</span></div>
                 <div class="card-body">
                     <form action="" method="POST" class="p-4" >
                         <div class="row gx-5 gy-3 p-1 py-3 rounded border" style="background:rgba(5, 5, 5, .05)">
@@ -109,7 +109,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 d-flex" style="justify-content: center;">
+                        <div class="col-12 d-flex" style="justify-content: center; gap: 4rem;">
+                            <a href="/pinjam/<%= data._id%>" class="mt-4 btn col-sm-12 col-md-2 base-green-1" style="color: white;">Pinjam</a>
                             <input type="submit" value="Perbarui" class="mt-4 btn btn-primary col-sm-12 col-md-2 " >
                         </div>
                     </form>
