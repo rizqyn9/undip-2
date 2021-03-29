@@ -10,7 +10,7 @@ const path = require('path')
 const {PORT,URIS} = require('./server/config')
 
 
-mongoose.connect(URIS,{useNewUrlParser: true, useUnifiedTopology:true, useCreateIndex:true})
+mongoose.connect(URIS,{useNewUrlParser: true, useUnifiedTopology:true, useCreateIndex:true, useFindAndModify:true})
     .then(()=> console.log("Terhubung ke Database"))
     .catch(err => console.log(err))
 
@@ -34,7 +34,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         store: dataSession,
-        cookie: { maxAge: 1000000 },
+        cookie: { maxAge: 1000 *60 *60 *60 },
     })
 );
 
@@ -45,6 +45,7 @@ app.use('/data', require('./server/controllers/controller-data'))
 app.use('/ubah', require('./server/controllers/controller-ubah'))
 app.use('/tables', require('./server/controllers/controller-tables'))
 app.use('/pinjam', require('./server/controllers/controller-pinjam'))
+app.use('/user', require('./server/controllers/controller-user'))
 app.get('/', (req,res,next) => {
     res.render('dashboard', {
         user : req.session.user.dataPengguna,
