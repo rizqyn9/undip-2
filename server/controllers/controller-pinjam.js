@@ -35,7 +35,7 @@ router.get('/' , async (req,res,next) => {
     const dataPinjam = await Inaktif.find({Pinjam : true}) 
     res.render('data', {
         user : req.session.user.dataPengguna,
-        title : "Data Permanen",
+        title : "Data Pinjam",
         data : dataPinjam,
         pinjam : true
     })

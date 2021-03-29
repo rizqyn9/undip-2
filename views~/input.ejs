@@ -1,0 +1,112 @@
+<%- include('./components/_header.ejs') %>  
+<%- include('./components/_aside.ejs') %>  
+<%- include('./components/_nav.ejs') %> 
+
+<!-- !Body -->
+<div class="p-4 pt-1">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card mb-4 shadow-lg">
+                <div class="card-header">Data Inaktif</div>
+                <div class="card-body">
+                    <form action="" method="POST" class="p-4" >
+                        <div class="row gx-5 gy-3 p-1 py-3 rounded border" style="background:rgba(5, 5, 5, .05)">
+                            <div class=" col-md-6">
+                                <label for="NoArsip" class="form-label">No Arsip *</label>
+                                <input type="number" class="form-control" id="NoArsip" name="NoArsip" placeholder="Nomor Arsip" required>
+                            </div>
+                            <div class=" col-md-6">
+                                <label for="TanggalInput" class="form-label">Tanggal Input *</label>
+                                <input type="date" class="form-control" id="TanggalInput" name="TanggalInput" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="PenciptaArsip" class="form-label">Pencipta Arsip *</label>
+                                <input type="text" class="form-control" id="PenciptaArsip" name="PenciptaArsip"  placeholder="Pencipta Arsip" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="UnitPengelolah" class="form-label">Unit Pengelolah *</label>
+                                <input type="text" class="form-control" id="UnitPengelolah" name="UnitPengelolah" placeholder="Unit Pengelolah" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="Indeks" class="form-label">Indeks *</label>
+                                <input type="number" class="form-control" id="Indeks" name="Indeks"  placeholder="Indeks" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="NoItemArsip" class="form-label">No Item Arsip *</label>
+                                <input type="number" class="form-control" id="NoItemArsip" name="NoItemArsip" placeholder="Nomor Item Arsip" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="KodeKlasifikasi" class="form-label">Kode Klasifikasi *</label>
+                                <input type="text" class="form-control" id="KodeKlasifikasi" name="KodeKlasifikasi"  placeholder="Kode Klasifikasi" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="TanggalSurat" class="form-label">Tanggal Surat *</label>
+                                <input type="date" class="form-control" id="TanggalSurat" name="TanggalSurat" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Uraian" class="form-label">Uraian *</label>
+                                <textarea name="Uraian" id="Uraian" class="form-control" style="min-height: 20vh;" placeholder="Uraian" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="RetensiAktif" class="form-label">Retensi Aktif *</label>
+                                <input type="text" class="form-control" id="RetensiAktif" name="RetensiAktif"  placeholder="Retensi Aktif" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="RetensiInaktif" class="form-label">Retensi Inaktif *</label>
+                                <input type="text" class="form-control" id="RetensiInaktif" name="RetensiInaktif"  placeholder="Retensi Inaktif" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="BokArsip" class="form-label">Bok Arsip *</label>
+                                <input type="text" class="form-control" id="BokArsip" name="BokArsip"  placeholder="Bok Arsip" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="BokArsip" class="form-label">Keterangan *</label>
+                                <select class="form-select" aria-label="" name="Keterangan" required>
+                                    <option selected disabled>Open this select menu</option>
+                                    <option value="Musnah">Musnah</option>
+                                    <option value="Permanen">Permanen</option>
+                                    <option value="Ditinjau Kembali">Ditinjau Kembali</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="KodeKlasifikasi" class="form-label">Tingkat Perkembangan</label>
+                                <div class="row g-3 col-md-12">
+                                    <div class="col-md-5">
+                                        <select class="form-select" aria-label="" name="Data1" required>
+                                            <option selected disabled>Open this select menu</option>
+                                            <option value="Asli">Asli</option>
+                                            <option value="Lemburan">Lemburan</option>
+                                            <option value="Salinan">Salinan</option>
+                                            <option value="Fotocopy">Fotocopy</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select class="form-select" aria-label="" name="Data2" required>
+                                            <% for( let i = 1; i <= 10; i++ ) { %>
+                                                <option value="<%= i %>"><%= i %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5 mb-2">
+                                        <select class="form-select" aria-label="" name="Data3" required >
+                                            <option selected disabled>Open this select menu</option>
+                                            <option value="Berkas">Berkas</option>
+                                            <option value="Lembar">Lembar</option>
+                                            <option value="Ekspi">Ekspi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex" style="justify-content: center;">
+                            <input type="submit" value="Submit" class="mt-4 btn btn-primary col-sm-12 col-md-2 " >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+
+<%- include('./components/_footer.ejs') %>  

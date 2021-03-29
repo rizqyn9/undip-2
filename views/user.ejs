@@ -1,0 +1,55 @@
+<%- include('./components/_header.ejs') %>  
+<%- include('./components/_aside.ejs') %>  
+<%- include('./components/_nav.ejs') %>  
+<main class="min-h-screen bg-green1 p-7 text-green5 shadow-inner flex flex-col justify-center items-center" >
+    <div class="w-1/2 bg-green2 bg-opacity-25 flex px-16 py-20 rounded-lg">
+        <form action="" method="POST" class="w-full flex flex-col gap-5">
+            <input type="text" name="id" id="Name" class="hidden" value="<%= user._id %>" disabled=true>
+            <div class="w-full grid grid-cols-3 items-center">
+                <label for="Name" class="t_labe col-span-1">Nama</label>
+                <input type="text" name="Name" id="Name" class="t_input col-span-2" value="<%= user.Name %>" disabled=true>
+            </div>
+            <div class="w-full grid grid-cols-3 items-center">
+                <label for="Username" class="t_labe col-span-1 ">Nama Pengguna</label>
+                <input type="text" id="Username" name="Username" class="t_input col-span-2" value="<%= user.Username %>" disabled=true>
+            </div>
+            <div class="w-full grid grid-cols-3 items-center">
+                <label for="Email" class="t_labe col-span-1 ">Email</label>
+                <input type="email" id="Email" name="Email" class="t_input col-span-2" value="<%= user.Email%>" disabled=true>
+            </div>
+            <div class="w-full grid grid-cols-3 items-center hidden" id="passwordInput">
+                <label for="Password" class="t_labe col-span-1 ">Password Baru</label>
+                <input type="password" name="Password" class="t_input col-span-2" disabled= true>
+            </div>
+            <div class="flex w-full justify-center gap-6 mt-8 hidden" id="submitUbah">
+                <a class="w-32 rounded-md py-2 bg-green2 text-center" onclick="ubahData()">Batal</a>
+                <input type="submit" value="Perbarui" class="w-32 rounded-md py-2 bg-green2" disabled=true>
+            </div>
+            <div class="flex w-full justify-center gap-6 mt-8" id="ubah">
+                <a onclick="ubahData()" class="w-32 rounded-md py-2 bg-green2 text-center">Ubah</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script>
+    let inputData = document.querySelectorAll('input')
+    let passwordInput = document.querySelector('#passwordInput')
+    let ubahBtn = document.querySelector('#ubah')
+    let submitBtn = document.querySelector('#submitUbah')
+
+    function ubahData () {
+        ubahBtn.classList.toggle('hidden')
+        submitBtn.classList.toggle('hidden')
+        passwordInput.classList.toggle('hidden')
+        inputData.forEach(el => {
+            if(el.disabled){
+                el.disabled = false
+            } else {
+                el.disabled = true
+            }
+        })
+    }
+
+</script>
+<%- include('./components/_footer.ejs') %>  

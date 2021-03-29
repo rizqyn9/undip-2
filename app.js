@@ -45,6 +45,7 @@ app.use('/data', require('./server/controllers/controller-data'))
 app.use('/ubah', require('./server/controllers/controller-ubah'))
 app.use('/tables', require('./server/controllers/controller-tables'))
 app.use('/pinjam', require('./server/controllers/controller-pinjam'))
+app.use('/user', require('./server/controllers/controller-user'))
 app.get('/', (req,res,next) => {
     res.render('dashboard', {
         user : req.session.user.dataPengguna,

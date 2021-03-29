@@ -14,10 +14,17 @@
             overflow: hidden;
             transition: all .5s ease;
         }
+
+        .hideSideBar > *{
+            display: none;
+        }
+
+        
     </style>
+
 </head>
 <body class="flex text-white h-max">
-    <aside class=" flex-shrink-0 bg-green1 flex flex-col transition-all relative bg-green4 bg-opacity-90" id="aside" style="width: 18rem; height: inherit;">
+    <aside class=" flex-shrink-0  flex flex-col transition-all relative bg-green4 bg-opacity-90" id="aside" style="width: 18rem; height: inherit;">
         <div class=" fixed" style="width: inherit;">
             <div class="h-16 flex items-center justify-center text-lg font-extrabold text-center text-white bg-green4">SIORI</div>
             <div class="w-full flex flex-grow flex-col p-2 justify-center text-white gap-1">
@@ -48,12 +55,9 @@
     <script>
         function hideShow () {
             let aside = document.querySelector('#aside')
-            // console.log(aside.classList.contains('hideS'))
             if(aside.classList.contains('hideSideBar')){
-                console.log(true);
                 aside.classList.remove('hideSideBar')
             } else {
-                console.log(false);
                 aside.classList.add('hideSideBar')
             }
         }
