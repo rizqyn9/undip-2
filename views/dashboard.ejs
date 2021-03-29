@@ -1,16 +1,22 @@
 <%- include('./components/_header.ejs') %>  
 <%- include('./components/_aside.ejs') %>  
-<%- include('./components/_nav.ejs') %>  
+<%- include('./components/_nav.ejs') %> 
 
-<main class="min-h-screen bg-green1 p-7 text-green5" >
-    <div class=" w-full border-l-4 border-green5 rounded-sm bg-green2 flex flex-col p-7 tracking-wider  justify-center gap-1" style="min-height: 3rem;">
-        <h1 class="text-2xl">Selamat datang di <strong>SIORI</strong></h1>
-    </div>
-    <div class=" w-80 mt-2 h-36 border-l-4 border-green5 rounded-sm bg-green2 flex flex-col p-7 tracking-wider  justify-center gap-1">
-        <p class="text-4xl font-extrabold">213</p>
-        <h1 class="text-xl font-bold">Total Arsip</h1>
-        <a href="/data" class="text-md hover:underline">Lihat detail</a>
-    </div>
-    </main>
+
+<div class="p-5 pt-4">
+    <p class="h2">Selamat datang di SI ORI</p>
+    
+    <!-- Card -->
+      <div class="col-sm-6 col-lg-3 mt-4">
+          <div class="card mb-4 text-white bg-dark rounded-lg">
+            <div class="card-body">
+              <div class="fs-4 fw-semibold">200</div>
+              <div>Data Inaktif</div>
+              <small class="text-medium-emphasis-inverse"><a href="/data" class="link-light">Lihat detail</a></small>
+          </div>
+        </div>
+  </div>
+</div>
+
 
 <%- include('./components/_footer.ejs') %>  

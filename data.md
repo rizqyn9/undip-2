@@ -21,11 +21,3 @@ Session {
     }
   }
 }
-
-
-Tutorial Update = 
-- git pull 
-
-
-Tutorial run= 
-- npm start

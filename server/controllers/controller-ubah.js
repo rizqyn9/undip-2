@@ -44,4 +44,21 @@ router.post('/:id', async (req,res,next) => {
     }
 })
 
+router.get('/hapus/:id', async (req,res,next) => {
+    try {
+        await Inaktif.findByIdAndDelete(req.params.id)
+                    .then(data => {
+                        if (!data){
+                            res.status(401).redirect('/data')
+                        } else {
+                            console.log("Deleted data");
+                            res.status(201).redirect('/data')
+                        }
+                    })
+        } catch (error) {
+            console.log(error);
+            res.status(401).redirect('/data')
+    }
+})
+
 module.exports = router

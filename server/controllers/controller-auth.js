@@ -7,14 +7,13 @@ moment.locale('id')
 
 //  Masuk ke menu autentikasi
 router.get('/' , (req,res,next) => {
-    res.render('daftar',{
+    res.render('login',{
         title : "Masuk SIORI"
     })
 })
 
 // Daftar
 router.post('/signup', async (req, res,next) => {
-    // console.log(req.body);
     try {
         const user = new Users({
             ...req.body,
@@ -38,8 +37,6 @@ router.post('/signup', async (req, res,next) => {
 //  Masuk
 router.post('/', async (req, res,next) => {
     try {
-    // console.log(req.body);
-
         // console.log(req.body.Password);
         let user = await Users.findOne({Username : req.body.Username}).exec()
         if(!user){
