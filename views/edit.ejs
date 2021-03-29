@@ -72,7 +72,7 @@
                 <div class="col-span-2">
                     <select name="Data1" class="t_input" required>
                         <% 
-                            var optionsData1 = ["Asli","Lemburan","Salinan", "Fotocopy"]
+                            var optionsData1 = ["Asli","Tembusan","Salinan", "Fotocopy"]
                             for (let i = 0; i < optionsData1.length; i++) {
                                     var selectedData1 = (data.TingkatPerkembangan.Data1 == optionsData1[i]) ? "selected" : "";
                                     %><option value="<%= optionsData1[i] %>" <%= selectedData1 %>><%= optionsData1[i] %></option><%
@@ -93,7 +93,7 @@
                 <div class="col-span-2">
                     <select class="t_input" name="Data3" required >
                         <% 
-                            var optionsData1 = ["Berkas","Lembar","Ekspi"]
+                            var optionsData1 = ["Berkas","Lembar","Ekspl"]
                             for (let i = 0; i < optionsData1.length; i++) {
                                     var selectedData1 = (data.TingkatPerkembangan.Data1 == optionsData1[i]) ? "selected" : "";
                                     %><option value="<%= optionsData1[i] %>" <%= selectedData1 %>><%= optionsData1[i] %></option><%
