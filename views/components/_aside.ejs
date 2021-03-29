@@ -1,17 +1,11 @@
-<aside class=" flex-shrink-0  flex flex-col transition-all relative bg-green4 bg-opacity-90" id="aside" style="width: 18rem; height: inherit;">
-    <div class=" fixed" style="width: inherit;">
-        <div class="h-16 flex items-center justify-center text-lg font-extrabold text-center text-white bg-green4">SIORI</div>
-        <div class="w-full flex flex-grow flex-col p-2 justify-center text-white gap-1">
-            <a href="/" class="w-full px-5 py-4 rounded-lg bg-green3 hover:text-green1" ><span class="text-lg font-medium">Dashboard</span></a>
-            <a href="/data" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Arsip Inaktif</span></a>
-            <hr>
-            <a href="/data/permanen" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Permanen</span></a>
-            <a href="/data/musnah" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Musnah</span></a>
-            <a href="/data/ditinjau" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Ditinjau Kembali</span></a>
-            <hr>
-            <a href="/pinjam" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Pinjam</span></a>
-            <hr>
-            <a href="/user" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">User</span></a>
-        </div>
-    </div>
-</aside>
+<div class="sidebar sidebar-dark sidebar-fixed sidebar-self-hiding-md" id="sidebar">
+    <div class="sidebar-brand d-lg-down-none">
+      SIORI
+      </div>
+    <ul class="sidebar-nav flex-column " data-coreui="navigation">
+        <li class="nav-item"><a href="/" class="nav-link">Dashboard</a></li>
+        <li class="nav-item"><a href="/data" class="nav-link">Inaktif</a></li>
+        <li class="nav-item"><a href="/data/baru" class="nav-link">Tambah Data</a></li>
+        <li class="nav-item"><a href="/pinjam" class="nav-link">Pinjam</a></li>
+      </ul>
+  </div>

@@ -1,11 +1,11 @@
 {
   "name": "undip-2",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "css": "npx tailwindcss build custom.css -o public/css/generated.css"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -23,17 +23,6 @@
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.1",
     "nodemon": "^2.0.7",
-    "path": "^0.12.7",
-    "tailwindcss": "^2.0.4"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rizqyn9/undip-2.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rizqyn9/undip-2/issues"
-  },
-  "homepage": "https://github.com/rizqyn9/undip-2#readme",
-  "description": ""
+    "path": "^0.12.7"
+  }
 }
