@@ -21,7 +21,8 @@ router.get('/',async (req,res,next) => {
     res.status(200).render('data',{
         user : req.session.user.dataPengguna,
         title : "Data Inaktif",
-        data : data
+        data : data,
+        path : 'arsip'
     })
 })
 
@@ -29,7 +30,8 @@ router.get('/',async (req,res,next) => {
 router.get('/baru',(req,res,next) => {
     res.status(200).render('input', {
         user : req.session.user.dataPengguna,
-        title : "Input Data"
+        title : "Input Data",
+        path: 'arsip'
     })
 })
 
@@ -84,7 +86,8 @@ router.get('/permanen', async(req,res,next) => {
         res.render('data', {
             user : req.session.user.dataPengguna,
             title : "Data Permanen",
-            data : dataPermanen
+            data : dataPermanen,
+            path : 'permanen'
         })
     } catch (error) {
         console.log(error);
@@ -97,7 +100,8 @@ router.get('/musnah', async(req,res,next) => {
         res.render('data', {
             user : req.session.user.dataPengguna,
             title : "Data Musnah",
-            data : dataMusnah
+            data : dataMusnah,
+            path : 'musnah'
         })
     } catch (error) {
         console.log(error);
@@ -110,7 +114,8 @@ router.get('/ditinjau', async(req,res,next) => {
         res.render('data', {
             user : req.session.user.dataPengguna,
             title : "Data Ditinjau",
-            data : dataDitinjau
+            data : dataDitinjau,
+            path : 'ditinjau'
         })
     } catch (error) {
         console.log(error);

@@ -8,7 +8,8 @@ router.get('/:id',async (req,res,next) => {
         res.render('edit',{
             user : req.session.user.dataPengguna,
             title : "Edit Data",
-            data : data
+            data : data,
+            path : 'arsip'
         })
     } catch (error) {
         console.log(error);

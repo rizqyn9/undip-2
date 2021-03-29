@@ -7,8 +7,8 @@
 
     <form action="" method="POST" class=" grid grid-cols-2 gap-4">
         <div class=" px-8 ">
-            <label for="NoArsip" class="t_label">No Arsip *</label>
-            <input type="text" id="NoArsip" name="NoArsip" class="t_input" placeholder="Nomor Arsip" required>
+            <label for="NoArsip" class="t_label">No Definitif *</label>
+            <input type="text" id="NoArsip" name="NoDefinitif" class="t_input" placeholder="Nomor Definitif" required>
         </div>
         <div class="px-8">
             <label class="t_label" for="PenciptaArsip">Pencipta Arsip *</label>
@@ -19,12 +19,8 @@
             <input type="text" name="UnitPengelolah" id="UnitPengelolah" class="t_input" placeholder="Unit Pengolah" required>
         </div>
         <div class="px-8">
-            <label class="t_label" for="Indeks">Indeks *</label>
-            <input type="text" name="Indeks" id="Indeks" class="t_input" placeholder="Indeks" required>
-        </div>
-        <div class="px-8">
-            <label class="t_label" for="NoItemArsip">No Item Arsip *</label>
-            <input type="text" name="NoItemArsip" id="NoItemArsip" class="t_input" placeholder="Nomor Item Arsip" required>
+            <label class="t_label" for="Indeks">Indeks</label>
+            <input type="text" name="Indeks" id="Indeks" class="t_input" placeholder="Indeks" >
         </div>
         <div class="px-8">
             <label class="t_label" for="KodeKlasifikasi">Kode Klasifikasi *</label>
@@ -35,17 +31,21 @@
             <input type="date" name="TanggalSurat" id="TanggalSurat" class="t_input" placeholder="Tanggal Surat" required>
         </div>
         <div class="px-8">
-            <label for="BokArsip" class="t_label">Keterangan *</label>
-            <select class="t_input" name="Keterangan" required>
+            <label for="BokArsip" class="t_label">Keterangan</label>
+            <select class="t_input" name="Keterangan" >
                 <option selected disabled>Open this select menu</option>
                 <option value="Musnah">Musnah</option>
                 <option value="Permanen">Permanen</option>
                 <option value="Ditinjau Kembali">Ditinjau Kembali</option>
             </select>
         </div>
+        <div class="px-8">
+            <label class="t_label" for="">Nomor Boks</label>
+            <input type="text" name="Boks" class="t_input" placeholder="Nomor Boks" >
+        </div>
         <div class="px-8 col-span-2">
             <label class="t_label" for="">Uraian</label>
-            <textarea type="text" name="Uraian" class="t_input" style="min-height: 25vh;" placeholder="Uraian" required></textarea>
+            <textarea type="text" name="Uraian" class="t_input" style="min-height: 25vh;" placeholder="Uraian"></textarea>
         </div>
         <!-- <div class="px-8">
             <label class="t_label" for="">Bulan / Tahun</label>
@@ -55,20 +55,12 @@
             </div>
         </div> -->
         <div class="px-8">
-            <label class="t_label" for="RetensiAktif">Retensi Aktif *</label>
-            <input type="text" name="RetensiAktif" id="RetensiAktif" class="t_input" placeholder="Retensi Aktif" required>
+            <label class="t_label" for="RetensiAktif">Retensi Aktif</label>
+            <input type="text" name="RetensiAktif" id="RetensiAktif" class="t_input" placeholder="Retensi Aktif" >
         </div>
         <div class="px-8">
-            <label class="t_label" for="RetensiInaktif">Retensi Inaktif *</label>
-            <input type="text" name="RetensiInaktif" id="RetensiInaktif" class="t_input" placeholder="Retensi Inaktif" required>
-        </div>
-        <div class="px-8">
-            <label for="BokArsip" class="t_label">Bok Arsip *</label>
-            <input type="text" class="t_input" id="BokArsip" name="BokArsip"  placeholder="Bok Arsip" required>
-        </div>
-        <div class="px-8">
-            <label class="t_label" for="">Nomor Boks *</label>
-            <input type="text" name="Boks" class="t_input" placeholder="Nomor Boks" required>
+            <label class="t_label" for="RetensiInaktif">Retensi Inaktif</label>
+            <input type="text" name="RetensiInaktif" id="RetensiInaktif" class="t_input" placeholder="Retensi Inaktif" >
         </div>
         <div class="px-8 col-span-2">
             <label for="KodeKlasifikasi" class="t_label">Tingkat Perkembangan *</label>

@@ -1,12 +1,16 @@
-<div class="flex-grow ">
-    <nav class=" bg-green2 border-b-2 h-16 flex justify-between items-center px-7">
-        <div class="flex gap-5">
-            <button onclick="hideShow()" class="p-3 bg-green3 rounded-sm appearance-none outline-none focus:outline-none"></button>
-            <h1><%= title %></h1>
+<div class="flex-grow">
+    <nav class=" bg-green2 border-b-2 h-16 flex justify-between items-center px-7 shadow-lg">
+        <div class="flex gap-5 items-center">
+            <a onclick="hideShow()" class="w-8 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                  </svg>
+            </a>
+            <h1 class="text-xl font-semibold"><%= title %></h1>
         </div>
         <div onclick="showProfile()" class="flex items-center justify-center gap-4 cursor-pointer">
             <div class="p-4 bg-green3 rounded-full"></div>
-            <h1 ><%= user.Username %> 
+            <h1 class="font-semibold"><%= user.Username %> 
                 <div class=" w-48 px-4 py-2 bg-green4 absolute top-14 right-7 flex flex-col gap-2 rounded-lg transition-all hide-drop" style="min-height: max-content; z-index: 100;" id="profile-dropdown">
                     <a href="/user"  class="bg-green4 hover:bg-green2 px-2 py-1 rounded-md text-center">Profile</a>
                     <a href="/authentication/keluar"  class="bg-green4 hover:bg-red-200 hover:text-red-900 px-2 py-1 rounded-md text-center">Keluar</a>

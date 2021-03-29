@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const Inaktif = new mongoose.Schema({
-    NoArsip: {
+    NoDefinitif: {
         type: String
     },
     TanggalInput: {
@@ -14,9 +14,6 @@ const Inaktif = new mongoose.Schema({
         type: String
     },
     Indeks: {
-        type: String
-    },
-    NoItemArsip: {
         type: String
     },
     KodeKlasifikasi: {
@@ -32,9 +29,6 @@ const Inaktif = new mongoose.Schema({
         type: String
     },
     RetensiInaktif: {
-        type: String
-    },
-    BokArsip: {
         type: String
     },
     Keterangan : {
@@ -57,7 +51,15 @@ const Inaktif = new mongoose.Schema({
     },
     Pinjam : {
         type: Boolean,
-        default : false
+        default : false,
+    },
+    DataPinjam: {
+        Nama : {
+            type: String
+        },
+        NIP : {
+            type: String
+        }
     }
 })
 
