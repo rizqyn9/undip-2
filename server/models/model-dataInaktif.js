@@ -59,6 +59,9 @@ const Inaktif = new mongoose.Schema({
         },
         NIP : {
             type: String
+        },
+        TanggalPinjam : {
+            type: String
         }
     }
 })

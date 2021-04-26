@@ -23,7 +23,8 @@ router.post('/:id', async(req,res,next) => {
             Pinjam : true,
             DataPinjam : {
                 Nama : req.body.NamaPinjam,
-                NIP : req.body.NIP
+                NIP : req.body.NIP,
+                TanggalPinjam : req.body.TanggalPinjam,
             }
         }).then(data => {
             if(!data) {
