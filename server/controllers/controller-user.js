@@ -6,6 +6,7 @@ router.get('/' , async(req,res,next) => {
     res.render('user',{
         user : data,
         title : "User Setting",
+        path: 'user'
     })
 })
 

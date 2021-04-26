@@ -2,7 +2,17 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
+  purge: {
+    enabled: true,
+    content : [
+      './views/**/*.ejs',
+      './views/*.ejs',
+    ]    
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

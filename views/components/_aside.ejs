@@ -2,16 +2,31 @@
     <div class=" fixed" style="width: inherit;">
         <div class="h-16 flex items-center justify-center text-lg font-extrabold text-center text-white bg-green4">SIORI</div>
         <div class="w-full flex flex-grow flex-col p-2 justify-center text-white gap-1">
-            <a href="/" class="w-full px-5 py-4 rounded-lg bg-green3 hover:text-green1" ><span class="text-lg font-medium">Dashboard</span></a>
-            <a href="/data" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Arsip Inaktif</span></a>
+            <a href="/" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'dashboard') ? 'bg-green3' : '' %>" >
+                <i class="w-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                      </svg>
+                </i>
+                <span class="text-lg font-medium">Dashboard</span>
+            </a>
+            <a href="/data" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'arsip') ? 'bg-green3' : '' %>" >
+                <i class="w-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
+                        <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" />
+                        </svg>
+                </i>
+                <span class="text-lg font-medium">Arsip Inaktif</span>
+            </a>
+                <hr>
+                <a href="/data/permanen" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'permanen') ? 'bg-green3' : '' %>" ><span class="text-lg font-medium">Permanen</span></a>
+                <a href="/data/musnah" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'musnah') ? 'bg-green3' : '' %>" ><span class="text-lg font-medium">Musnah</span></a>
+            <a href="/data/ditinjau" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'ditinjau') ? 'bg-green3' : '' %>" ><span class="text-lg font-medium">Ditinjau Kembali</span></a>
             <hr>
-            <a href="/data/permanen" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Permanen</span></a>
-            <a href="/data/musnah" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Musnah</span></a>
-            <a href="/data/ditinjau" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Ditinjau Kembali</span></a>
+            <a href="/pinjam" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'pinjam') ? 'bg-green3' : '' %>" ><span class="text-lg font-medium">Pinjam</span></a>
             <hr>
-            <a href="/pinjam" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">Pinjam</span></a>
-            <hr>
-            <a href="/user" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1" ><span class="text-lg font-medium">User</span></a>
+            <a href="/user" class="w-full px-5 py-4 rounded-lg hover:bg-green3 hover:text-green1 flex items-center gap-3 <%= (path == 'user') ? 'bg-green3' : '' %>" ><span class="text-lg font-medium">User</span></a>
         </div>
     </div>
 </aside>

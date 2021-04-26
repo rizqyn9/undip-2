@@ -49,7 +49,8 @@ app.use('/user', require('./server/controllers/controller-user'))
 app.get('/', (req,res,next) => {
     res.render('dashboard', {
         user : req.session.user.dataPengguna,
-        title : "Dashboard"
+        title : "Dashboard",
+        path : 'dashboard'
 
     })
 })
