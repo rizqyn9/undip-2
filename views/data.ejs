@@ -24,8 +24,23 @@
 <script>
     $(document).ready(function() {
         $('#data').DataTable({
-
+            dom: 'Bfrtip',
+            buttons: [
+            {
+                extend: 'print',
+                text: 'Print Table',
+                exportOptions: {
+                    modifier: {
+                        page: 'current'
+                    }
+                }
+            }
+            ]
         });
+        console.log(
+            $('.buttons-print').addClass('bg-green2 rounded-md p-3 py-1 hover:bg-green4 hover:text-green1')
+
+        );
     } );
 </script>
 
