@@ -63,6 +63,9 @@ const Inaktif = new mongoose.Schema({
         TanggalPinjam : {
             type: String
         }
+    },
+    Boks :{
+        type :String
     }
 })
 
