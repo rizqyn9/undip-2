@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "css": "npx tailwindcss build custom.css -o public/css/generated.css"
+    "css": "npx tailwindcss build custom.css -o public/css/generated.css",
+    "input": "node autoinput.js"
   },
   "keywords": [],
   "author": "",
@@ -16,14 +17,19 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.0.0-beta2",
     "connect-mongodb-session": "^2.4.1",
+    "convert-excel-to-json": "^1.7.0",
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "fast-csv": "^4.3.6",
+    "i": "^0.3.6",
+    "json-records": "^1.0.5",
     "moment": "^2.29.1",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.1",
     "nodemon": "^2.0.7",
+    "npm": "^7.19.0",
     "path": "^0.12.7",
     "tailwindcss": "^2.0.4"
   },

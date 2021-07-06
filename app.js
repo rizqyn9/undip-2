@@ -46,14 +46,15 @@ app.use('/ubah', require('./server/controllers/controller-ubah'))
 app.use('/tables', require('./server/controllers/controller-tables'))
 app.use('/pinjam', require('./server/controllers/controller-pinjam'))
 app.use('/user', require('./server/controllers/controller-user'))
-app.get('/', (req,res,next) => {
-    res.render('dashboard', {
-        user : req.session.user.dataPengguna,
-        title : "Dashboard",
-        path : 'dashboard'
+app.get('/', require('./server/controllers/controller-dashboard'))
+// app.get('/', (req,res,next) => {
+    // res.render('dashboard', {
+    //     user : req.session.user.dataPengguna,
+    //     title : "Dashboard",
+    //     path : 'dashboard'
 
-    })
-})
+    // })
+// })
 // app.use('/data')
 
 
