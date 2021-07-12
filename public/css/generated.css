@@ -1118,6 +1118,10 @@ video {
   letter-spacing: 0.05em;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .w-7 {
   width: 1.75rem;
 }

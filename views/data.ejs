@@ -12,6 +12,8 @@
                     <th>Kode Klasifikasi</th>
                     <th>Uraian</th>
                     <th>Tanggal Surat</th>
+                    <th>Keterangan</th>
+                    <th>Nomor Boks</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -25,23 +27,63 @@
     $(document).ready(function() {
         $('#data').DataTable({
             dom: 'Bfrtip',
+            columnDefs: [
+                {
+                    targets: -1,
+                    className: 'dt-body-center'
+                },
+                {
+                    targets: 1,
+                    className: 'dt-body-center'
+                },
+                {
+                    targets: 3,
+                    className: 'dt-body-center whitespace-nowrap'
+                },
+                {
+                    targets: 5,
+                    className: 'dt-body-center'
+                },
+            ],
+            scrollX: true,
+            scrollCollapse: true,
+            fixedColumns:   true,
+            lengthMenu: 
+            [
+                [ 10, 25, 50, -1 ],
+                [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+            ],
             buttons: [
-            {
-                extend: 'print',
-                text: 'Print Table',
-                exportOptions: {
-                    modifier: {
-                        page: 'current'
+                // 'csv',
+                {
+                    // extend : 'pageLength',
+                    // className : 'flex'
+                },
+                {
+                    extend : 'print',
+                    text : 'Print All Tables',
+                    className : 'bg-green2 rounded-md p-3 py-1 hover:bg-green4 hover:text-green1',
+                    autoPrint : false
+                },
+                {
+                    extend: 'print',
+                    text: 'Print Current Table',
+                    className :'bg-green2 rounded-md p-3 py-1 hover:bg-green4 hover:text-green1',
+                    autoPrint : false,
+                    exportOptions: {
+                        modifier: {
+                            page: 'current'
+                        }
                     }
                 }
-            }
+                
             ]
         });
-        console.log(
-            $('.buttons-print').addClass('bg-green2 rounded-md p-3 py-1 hover:bg-green4 hover:text-green1')
-
-        );
     } );
+
+    function addClick () {
+        console.log("sadad");
+    }
 </script>
 
 <%- include('./components/_footer.ejs') %>  

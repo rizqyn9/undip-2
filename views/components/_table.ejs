@@ -4,7 +4,9 @@
                     <td><%= i  + 1%></td>
                     <td><%= el.KodeKlasifikasi %></td>
                     <td><%= el.Uraian%></td>
-                    <td><%= el.TanggalSurat%></td>
+                    <td class="nowrap"><%= el.TanggalSurat%></td>
+                    <td><%= el.Keterangan%></td>
+                    <td><%= el.Boks%></td>
                     <td>
                         <div class="w-full flex items-center justify-evenly text-white">
                             <a class=" flex bg-green2 text-green5 hover:bg-green3 hover:text-green1 h-7 w-7 items-center justify-center rounded-md"  href="/ubah/<%= el._id %>">
